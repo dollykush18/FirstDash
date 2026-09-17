@@ -16,18 +16,32 @@ export default function Process() {
 
       {/* Desktop: connected row. Mobile: vertical timeline. */}
       <div className="mt-14">
-        {/* Mobile timeline */}
-        <ol className="relative space-y-8 border-l border-dashed border-brand-200 pl-8 md:hidden">
-          {processSteps.map((step) => (
-            <Reveal as="li" key={step.number} className="relative">
-              <span className="absolute -left-[3.05rem] flex h-9 w-9 items-center justify-center rounded-xl bg-brand-gradient text-white shadow-[0_10px_24px_-12px_rgba(124,77,255,0.9)]">
-                <Icon name={step.icon} className="h-4 w-4" />
-              </span>
-              <span className="text-[0.7rem] font-bold tracking-[0.16em] text-brand-500">
-                {step.number}
-              </span>
-              <h3 className="mt-1 text-base font-bold text-ink-950">{step.title}</h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-slate-600">{step.description}</p>
+        {/* Mobile timeline. The badge and the connecting line live in the same
+            flex column, so nothing relies on hand-tuned offsets. */}
+        <ol className="space-y-6 md:hidden">
+          {processSteps.map((step, i) => (
+            <Reveal as="li" key={step.number} className="flex gap-4">
+              <div className="flex flex-col items-center">
+                <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-brand-gradient text-white shadow-[0_10px_24px_-12px_rgba(124,77,255,0.9)]">
+                  <Icon name={step.icon} className="h-[1.05rem] w-[1.05rem]" />
+                </span>
+                {i < processSteps.length - 1 && (
+                  <span
+                    className="mt-2 w-px flex-1 border-l border-dashed border-brand-200"
+                    aria-hidden="true"
+                  />
+                )}
+              </div>
+
+              <div className="pb-2">
+                <span className="text-[0.7rem] font-bold tracking-[0.16em] text-brand-500">
+                  {step.number}
+                </span>
+                <h3 className="mt-1 text-base font-bold text-ink-950">{step.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-slate-600">
+                  {step.description}
+                </p>
+              </div>
             </Reveal>
           ))}
         </ol>

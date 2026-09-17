@@ -31,20 +31,10 @@ export default function Social() {
             </Reveal>
             <Reveal delay={0.16}>
               <div className="mt-8 flex flex-wrap gap-3">
-                <Button
-                  href={siteConfig.instagram}
-                  external
-                  icon={Instagram}
-                  className="bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] shadow-[0_12px_30px_-12px_rgba(238,42,123,0.8)]"
-                >
+                <Button href={siteConfig.instagram} external icon={Instagram} variant="instagram">
                   Instagram
                 </Button>
-                <Button
-                  href={siteConfig.youtube}
-                  external
-                  icon={Youtube}
-                  className="bg-[#ff0000] shadow-[0_12px_30px_-12px_rgba(255,0,0,0.7)] hover:bg-[#e60000]"
-                >
+                <Button href={siteConfig.youtube} external icon={Youtube} variant="youtube">
                   YouTube
                 </Button>
               </div>
@@ -56,7 +46,9 @@ export default function Social() {
             {strip.map((item, i) => (
               <div
                 key={item.alt}
-                className={`overflow-hidden rounded-xl border border-white/10 ${
+                /* bg-white/5 so a slow or failed image still reads as a tile
+                   rather than an empty outline */
+                className={`overflow-hidden rounded-xl border border-white/10 bg-white/5 ${
                   i % 2 === 1 ? 'translate-y-3 sm:translate-y-5' : ''
                 }`}
               >

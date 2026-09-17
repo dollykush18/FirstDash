@@ -5,6 +5,9 @@ import Logo from './Logo';
 import Button from './Button';
 import { navLinks } from '../data/navigation';
 
+/* Height of the fixed navbar, kept in step with scroll-padding-top in index.css */
+const NAV_OFFSET = 80;
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
@@ -49,6 +52,25 @@ export default function Navbar() {
       window.removeEventListener('keydown', onKey);
     };
   }, [open]);
+
+  /* The open menu locks body scrolling, and any jump fired in the same tick as
+     the unlock is swallowed. So release the lock, let the browser settle for a
+     couple of frames, then scroll to the section ourselves. */
+  const handleMobileNav = (event, href) => {
+    event.preventDefault();
+    setOpen(false);
+    document.body.style.overflow = '';
+    window.history.replaceState(null, '', href);
+
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        const target = document.querySelector(href);
+        if (!target) return;
+        const top = target.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
+        window.scrollTo({ top: Math.max(top, 0), behavior: 'smooth' });
+      });
+    });
+  };
 
   return (
     <>
@@ -158,7 +180,7 @@ export default function Navbar() {
                   >
                     <a
                       href={link.href}
-                      onClick={() => setOpen(false)}
+                      onClick={(e) => handleMobileNav(e, link.href)}
                       className="block rounded-xl px-4 py-3 text-base font-medium text-slate-200 transition-colors hover:bg-white/10 hover:text-white"
                     >
                       {link.label}
@@ -168,7 +190,7 @@ export default function Navbar() {
                 <li className="mt-2">
                   <Button
                     href="#contact"
-                    onClick={() => setOpen(false)}
+                    onClick={(e) => handleMobileNav(e, '#contact')}
                     withArrow
                     className="w-full"
                   >

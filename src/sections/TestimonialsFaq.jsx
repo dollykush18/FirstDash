@@ -19,9 +19,9 @@ export default function TestimonialsFaq() {
 
   return (
     <Section id="faq" tone="light">
-      <div className="grid gap-14 lg:grid-cols-2 lg:gap-16">
+      <div className="grid grid-cols-1 gap-14 lg:grid-cols-2 lg:gap-16">
         {/* Testimonials */}
-        <div>
+        <div className="min-w-0">
           <Reveal as="p" className="eyebrow">
             Testimonials
           </Reveal>
@@ -59,7 +59,7 @@ export default function TestimonialsFaq() {
         </div>
 
         {/* FAQ */}
-        <div>
+        <div className="min-w-0">
           <Reveal as="p" className="eyebrow">
             FAQ
           </Reveal>

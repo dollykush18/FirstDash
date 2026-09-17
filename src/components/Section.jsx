@@ -19,7 +19,10 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`relative overflow-hidden py-16 sm:py-20 lg:py-28 ${tones[tone]} ${className}`}
+      /* overflow-clip, not overflow-hidden: it contains the decorative glows
+         without turning the section into a scroll container, which would stop
+         `position: sticky` working for anything inside it. */
+      className={`relative overflow-clip py-16 sm:py-20 lg:py-28 ${tones[tone]} ${className}`}
       {...rest}
     >
       <div className={`container-page relative z-10 ${containerClassName}`}>{children}</div>

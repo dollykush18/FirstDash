@@ -28,6 +28,10 @@ const variants = {
     'bg-ink-950 text-white shadow-soft hover:bg-ink-800 hover:-translate-y-0.5',
   whatsapp:
     'bg-[#25D366] text-white shadow-[0_10px_30px_-10px_rgba(37,211,102,0.8)] hover:bg-[#1fbe5a] hover:-translate-y-0.5',
+  instagram:
+    'bg-gradient-to-r from-[#f9ce34] via-[#ee2a7b] to-[#6228d7] text-white shadow-[0_12px_30px_-12px_rgba(238,42,123,0.8)] hover:-translate-y-0.5 hover:brightness-110',
+  youtube:
+    'bg-none bg-[#ff0000] text-white shadow-[0_12px_30px_-12px_rgba(255,0,0,0.7)] hover:bg-[#e60000] hover:-translate-y-0.5',
 };
 
 export default function Button({
@@ -62,6 +66,7 @@ export default function Button({
     return (
       <a
         href={href}
+        onClick={onClick}
         className={classes}
         {...(external ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
         {...rest}

@@ -50,11 +50,11 @@ export function RestaurantDesktop() {
           <span className="text-[5px] uppercase tracking-[0.2em] text-orange-400 sm:text-[6px]">
             Fresh &middot; Local &middot; Daily
           </span>
-          <h3 className="text-[11px] font-extrabold leading-tight sm:text-[17px] lg:text-[20px]">
+          <div className="text-[11px] font-extrabold leading-tight sm:text-[17px] lg:text-[20px]">
             Good Food,
             <br />
             Good Mood.
-          </h3>
+          </div>
           <p className="max-w-[55%] text-[5px] leading-relaxed text-white/70 sm:text-[6.5px]">
             Seasonal plates cooked over wood fire in the heart of the city.
           </p>
@@ -140,11 +140,11 @@ export function RestaurantMobile() {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 to-black/20" />
         <div className="absolute inset-x-0 bottom-1 px-2">
-          <h4 className="text-[7px] font-extrabold leading-tight sm:text-[9px]">
+          <div className="text-[7px] font-extrabold leading-tight sm:text-[9px]">
             Good Food,
             <br />
             Good Mood.
-          </h4>
+          </div>
           <span className="mt-1 inline-block rounded-full bg-orange-500 px-1.5 py-[2px] text-[4px] font-semibold sm:text-[5px]">
             View Menu
           </span>
