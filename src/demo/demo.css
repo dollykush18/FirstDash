@@ -1,0 +1,20 @@
+/* Type scales used only inside the demo templates. Each template picks the
+   font family that suits its personality, so the six demos feel genuinely
+   different rather than recoloured copies of each other. */
+
+.font-serif-display {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+}
+
+.font-dm {
+  font-family: 'DM Sans', ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-outfit {
+  font-family: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+}
+
+/* Demo pages set their own page background, overriding the studio site's white */
+body:has(#demo-root) {
+  background: transparent;
+}

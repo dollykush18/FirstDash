@@ -1,9 +1,10 @@
-import { Check } from 'lucide-react';
+import { Check, ExternalLink } from 'lucide-react';
 import Section from '../components/Section';
 import Reveal from '../components/Reveal';
 import Button from '../components/Button';
 import DeviceMockup from '../components/mockups/DeviceMockup';
 import { caseStudy } from '../data/caseStudy';
+import { demoUrl } from '../data/demos';
 
 export default function CaseStudy() {
   return (
@@ -67,9 +68,18 @@ export default function CaseStudy() {
           </div>
 
           <Reveal delay={0.34}>
-            <Button href={caseStudy.ctaHref} className="mt-9" withArrow>
-              {caseStudy.ctaLabel}
-            </Button>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Button
+                href={demoUrl('restaurant-elegant')}
+                external
+                icon={ExternalLink}
+              >
+                View Live Demo
+              </Button>
+              <Button href={caseStudy.ctaHref} variant="light" withArrow>
+                {caseStudy.ctaLabel}
+              </Button>
+            </div>
           </Reveal>
         </div>
       </div>

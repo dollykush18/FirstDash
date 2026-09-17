@@ -11,11 +11,14 @@ import images from '../assets/images';
    accent      -> tailwind-free hex used for the mini site preview tint
    preview     -> controls the little fake website drawn on the card
    link        -> '#contact' keeps the card a lead magnet. Swap for a live URL.
+   demoCategory-> matches a `category` in src/data/demos.js. When set, the card
+                  shows a button per demo template instead of a single link.
    ========================================================================== */
 
 export const projects = [
   {
     id: 'restaurant',
+    demoCategory: 'Restaurant',
     title: 'Restaurant Website',
     category: 'Restaurant',
     type: 'Concept Project',
@@ -29,6 +32,7 @@ export const projects = [
   },
   {
     id: 'cafe',
+    demoCategory: 'Café',
     title: 'Café Website',
     category: 'Café',
     type: 'Concept Project',
@@ -53,6 +57,7 @@ export const projects = [
   },
   {
     id: 'salon',
+    demoCategory: 'Salon & Beauty',
     title: 'Salon Website',
     category: 'Salon & Beauty',
     type: 'Concept Project',

@@ -5,6 +5,7 @@ import Reveal from '../components/Reveal';
 import Button from '../components/Button';
 import ProjectCard from '../components/ProjectCard';
 import { projects } from '../data/projects';
+import { demoIndexUrl } from '../data/demos';
 
 export default function Work() {
   return (
@@ -18,13 +19,13 @@ export default function Work() {
         <SectionHeading
           eyebrow="Our Work"
           title="Websites Built to Make Businesses Stand Out"
-          description="Explore sample website concepts created for different types of local businesses."
+          description="Open a live demo and click through the whole page. Restaurants, cafés and salons each get two finished designs, so you can pick the direction that suits your business."
           tone="dark"
           className="flex-1"
         />
         <Reveal delay={0.15}>
-          <Button href="#contact" variant="secondary" withArrow>
-            View All Projects
+          <Button href={demoIndexUrl()} external variant="secondary" withArrow>
+            Browse All Demos
           </Button>
         </Reveal>
       </div>
@@ -40,8 +41,9 @@ export default function Work() {
       <Reveal delay={0.1}>
         <p className="mt-10 flex items-start gap-2.5 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-[0.82rem] leading-relaxed text-slate-400 sm:items-center">
           <Info className="mt-0.5 h-4 w-4 shrink-0 text-brand-300 sm:mt-0" aria-hidden="true" />
-          These are concept websites created to demonstrate design and build quality. Client
-          projects will be added here as they go live.
+          The demos are fully built sample websites, not screenshots &mdash; open one and scroll
+          it like a real site. They are concept designs made by WebsiteWallha; client projects
+          will be added here as they go live.
         </p>
       </Reveal>
     </Section>

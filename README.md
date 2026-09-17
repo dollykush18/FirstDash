@@ -7,6 +7,9 @@ studio for restaurants, cafés, shops, salons, clinics and other local businesse
 
 Built with **React + Vite + JavaScript + Tailwind CSS + Framer Motion + Lucide React**.
 
+It ships with **six live demo website templates** (two each for restaurants, cafés and
+salons) that clients can open, compare and pick from — see section 11.
+
 ---
 
 ## 1. Folder structure
@@ -14,6 +17,7 @@ Built with **React + Vite + JavaScript + Tailwind CSS + Framer Motion + Lucide R
 ```
 websitewallha/
 ├── index.html                  Page title, meta description, Open Graph, favicon
+├── demo.html                   Entry point for the demo templates (/demo.html?t=slug)
 ├── package.json
 ├── tailwind.config.js          Brand colours, fonts, shadows, gradients
 ├── vite.config.js
@@ -31,12 +35,27 @@ websitewallha/
     ├── config/
     │   └── siteConfig.js       ★ YOUR CONTACT DETAILS — edit this first
     │
+    ├── demo/                   The six live demo website templates
+    │   ├── main.jsx             Demo page entry point
+    │   ├── DemoApp.jsx          Picks a template from ?t=, plus the demo picker
+    │   ├── DemoBanner.jsx       Sticky bar: style switcher + "I want this design"
+    │   ├── demoImages.js        ★ Photos used inside the demos
+    │   ├── demo.css             Fonts used only by the templates
+    │   └── templates/
+    │       ├── RestaurantElegant.jsx   Saffron House
+    │       ├── RestaurantModern.jsx    Copper & Flame
+    │       ├── CafeArtisan.jsx         Brew & Bloom
+    │       ├── CafeMinimal.jsx         Daylight Coffee
+    │       ├── SalonLuxe.jsx           Maison Lux
+    │       └── SalonFresh.jsx          Bloom Beauty Bar
+    │
     ├── data/                   All website text lives here
     │   ├── navigation.js       Navbar + footer links
     │   ├── heroFeatures.js     Hero tick list
     │   ├── benefits.js         "Why you need a website" cards
     │   ├── services.js         The six service cards
     │   ├── projects.js         ★ Portfolio projects
+    │   ├── demos.js            ★ The demo template catalogue
     │   ├── caseStudy.js        Featured case study
     │   ├── process.js          The four process steps
     │   ├── whyUs.js            "Why choose us" cards + tech pills
@@ -199,7 +218,67 @@ The small print under the cards is the `pricingNote` export in the same file.
 says so in plain text. Change a project's `type` to `Client Project` only once a real
 client's site is live. No fake clients, logos, results or testimonials are used anywhere.
 
-## 11. Where to replace images
+## 11. The demo website templates
+
+Six fully built sample websites ship with the project — **two design directions each
+for Restaurant, Café and Salon** — so a client can open both, compare them, and tell
+you which one they want.
+
+| Business | Style | Demo | Opens at |
+| --- | --- | --- | --- |
+| Restaurant | Elegant | Saffron House | `/demo.html?t=restaurant-elegant` |
+| Restaurant | Modern | Copper & Flame | `/demo.html?t=restaurant-modern` |
+| Café | Artisan | Brew & Bloom | `/demo.html?t=cafe-artisan` |
+| Café | Minimal | Daylight Coffee | `/demo.html?t=cafe-minimal` |
+| Salon | Luxe | Maison Lux | `/demo.html?t=salon-luxe` |
+| Salon | Fresh | Bloom Beauty Bar | `/demo.html?t=salon-fresh` |
+
+`/demo.html` with no `?t=` shows a picker listing all six.
+
+### How a client uses them
+
+1. On the **Our Work** section, cards for Restaurant, Café and Salon show two buttons
+   instead of one, labelled by style (e.g. *Elegant* / *Modern*).
+2. Clicking one opens that full demo site in a new tab, so your own site stays open.
+3. A bar pinned to the bottom of every demo lets them **flip straight to the other style**
+   for the same business type, then hit **"I want this design"** — which drops them on
+   your enquiry form.
+
+These are real, shareable links. You can paste one straight into a WhatsApp chat:
+
+```
+https://yourdomain.com/demo.html?t=salon-luxe
+```
+
+### Editing a demo
+
+Each demo is a single self-contained file in `src/demo/templates/`. Open the one you want
+and edit the text, prices and menu items at the top of the file — they are all plain
+arrays. Photos come from `src/demo/demoImages.js` and are replaced the same way as the
+main site's images (see section 12).
+
+### Adding another demo
+
+1. Copy an existing template in `src/demo/templates/` and restyle it.
+2. Register it in `src/demo/DemoApp.jsx` (the `templates` map).
+3. Add an entry to `src/data/demos.js` with a `slug`, `category`, `businessName`
+   and a one-word `style` label.
+4. To attach it to a portfolio card, set that project's `demoCategory` in
+   `src/data/projects.js` to the same `category` string.
+
+Any project **without** a `demoCategory` keeps a plain "Discuss this project" button, so a
+card never promises a demo that does not exist.
+
+### Notes
+
+- Forms inside the demos are deliberately inert — they validate visually but send
+  nothing. Only your own contact form on the main site submits.
+- Demo pages are set to `noindex` in `demo.html` so they never compete with your real
+  site in Google. Remove that meta tag if you ever want them indexed.
+- The demo businesses are fictional. Keep them that way unless you have a real client's
+  permission to show their site.
+
+## 12. Where to replace images
 
 **`src/assets/images.js`** — every photo on the site is listed once in this file.
 
@@ -217,7 +296,7 @@ Nothing else needs to change. **Before going live, replace these with your own p
 or real project screenshots** — hotlinked stock images are fine for a draft but slower
 and less distinctive than your own work.
 
-## 12. Where to edit website text
+## 13. Where to edit website text
 
 All copy lives in `src/data/`. Each file maps to one section:
 
@@ -235,6 +314,8 @@ All copy lives in `src/data/`. Each file maps to one section:
 | Testimonials                    | `src/data/testimonials.js`  |
 | FAQ                             | `src/data/faq.js`           |
 | Contact form dropdowns          | `src/data/businessTypes.js` |
+| Demo template catalogue         | `src/data/demos.js`         |
+| Text inside a demo site         | `src/demo/templates/*.jsx`  |
 
 Headings and paragraphs that sit directly in a section (like the hero headline) are in
 the matching file under `src/sections/`.
@@ -259,7 +340,7 @@ The section switches from honest placeholders to real quotes automatically.
 
 ---
 
-## 13. How to connect the contact form
+## 14. How to connect the contact form
 
 The form works out of the box in **demo mode**: it validates, shows a success message
 and logs the enquiry to the browser console. Nothing is sent anywhere yet.
@@ -300,9 +381,12 @@ if the network fails — it tells the visitor to message on WhatsApp instead.
 
 ---
 
-## 14. How to deploy the website
+## 15. How to deploy the website
 
 Build output goes to `dist/`. Any static host works.
+
+The demos build to plain `demo.html` files, so they need **no server rewrites or routing
+config** — they work on Netlify, Vercel, GitHub Pages and ordinary cPanel hosting as-is.
 
 ### Netlify
 
@@ -348,7 +432,9 @@ In `index.html`, replace `https://websitewallha.com/` with your real domain in t
   accessible mobile menu (`aria-expanded`, Escape to close, scroll lock), `alt` text on
   every image and decorative mockups hidden from screen readers.
 - **Performance** — icons are imported through a registry in `src/components/Icon.jsx`
-  rather than the whole Lucide library, keeping the bundle at ~104 kB gzipped. Images
-  are lazy-loaded and animations respect `prefers-reduced-motion`.
+  rather than the whole Lucide library, keeping the main bundle at ~59 kB gzipped. Each
+  demo template is code-split into its own ~4 kB chunk, so opening one demo never
+  downloads the other five. Images are lazy-loaded and animations respect
+  `prefers-reduced-motion`.
 - **SEO** — title, meta description, Open Graph and Twitter cards, canonical URL,
   `ProfessionalService` structured data, semantic sections and a favicon.

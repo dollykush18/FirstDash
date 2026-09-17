@@ -1,7 +1,13 @@
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, Eye, MessageSquare } from 'lucide-react';
 import MiniSite from './mockups/MiniSite';
+import { demosForCategory, demoUrl } from '../data/demos';
 
 export default function ProjectCard({ project }) {
+  /* Projects with a demoCategory have real, openable template pages.
+     Everything else falls back to an enquiry link, so no button ever
+     promises a demo that does not exist. */
+  const demos = project.demoCategory ? demosForCategory(project.demoCategory) : [];
+
   return (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.04] transition-all duration-300 hover:-translate-y-1.5 hover:border-brand-400/40 hover:shadow-[0_30px_70px_-30px_rgba(124,77,255,0.65)]">
       {/* Preview */}
@@ -11,6 +17,13 @@ export default function ProjectCard({ project }) {
             <MiniSite project={project} />
           </div>
         </div>
+
+        {demos.length > 0 && (
+          <span className="absolute right-5 top-5 inline-flex items-center gap-1.5 rounded-full bg-ink-950/85 px-2.5 py-1 text-[0.62rem] font-bold uppercase tracking-[0.1em] text-brand-200 backdrop-blur">
+            <Eye className="h-3 w-3" aria-hidden="true" />
+            {demos.length} live demos
+          </span>
+        )}
       </div>
 
       {/* Body */}
@@ -38,17 +51,41 @@ export default function ProjectCard({ project }) {
           ))}
         </ul>
 
-        <a
-          href={project.link}
-          className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-gradient px-4 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:shadow-[0_14px_34px_-14px_rgba(124,77,255,0.95)]"
-          aria-label={`View the ${project.title} concept`}
-        >
-          View Project
-          <ArrowUpRight
-            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-            aria-hidden="true"
-          />
-        </a>
+        {demos.length > 0 ? (
+          <div className="mt-5">
+            <p className="mb-2.5 text-[0.7rem] font-medium text-slate-400">
+              Open a design and see the whole page:
+            </p>
+            <div className="grid grid-cols-2 gap-2">
+              {demos.map((demo) => (
+                <a
+                  key={demo.slug}
+                  href={demoUrl(demo.slug)}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Open the ${demo.style} ${project.category} template demo in a new tab`}
+                  className="flex flex-col items-center justify-center gap-0.5 rounded-xl border border-white/12 bg-white/5 px-3 py-2.5 text-center transition-all duration-300 hover:-translate-y-0.5 hover:border-brand-400/50 hover:bg-brand-500/15"
+                >
+                  <span className="flex items-center gap-1 text-sm font-semibold text-white">
+                    {demo.style}
+                    <ArrowUpRight className="h-3.5 w-3.5 text-brand-300" aria-hidden="true" />
+                  </span>
+                  <span className="text-[0.66rem] leading-tight text-slate-400">
+                    {demo.businessName}
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <a
+            href={project.link}
+            className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-brand-gradient px-4 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:shadow-[0_14px_34px_-14px_rgba(124,77,255,0.95)]"
+          >
+            <MessageSquare className="h-4 w-4" aria-hidden="true" />
+            Discuss this project
+          </a>
+        )}
       </div>
     </article>
   );
