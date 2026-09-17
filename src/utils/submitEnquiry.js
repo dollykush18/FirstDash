@@ -43,7 +43,7 @@ export async function submitEnquiry(data) {
 
     /* demo */
     // eslint-disable-next-line no-console
-    console.info('[WebsiteWallha] Enquiry captured (demo mode):', data);
+    console.info('[FirstDash] Enquiry captured (demo mode):', data);
     await new Promise((r) => setTimeout(r, 700));
     return {
       ok: true,

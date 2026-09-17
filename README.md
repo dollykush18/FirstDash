@@ -1,8 +1,8 @@
-# WebsiteWallha
+# FirstDash
 
 > Websites for local businesses.
 
-A production-ready marketing website for **WebsiteWallha**, a boutique web-design
+A production-ready marketing website for **FirstDash**, a boutique web-design
 studio for restaurants, cafés, shops, salons, clinics and other local businesses.
 
 Built with **React + Vite + JavaScript + Tailwind CSS + Framer Motion + Lucide React**.
@@ -15,7 +15,7 @@ salons) that clients can open, compare and pick from — see section 11.
 ## 1. Folder structure
 
 ```
-websitewallha/
+firstdash/
 ├── index.html                  Page title, meta description, Open Graph, favicon
 ├── demo.html                   Entry point for the demo templates (/demo.html?t=slug)
 ├── package.json
@@ -123,19 +123,19 @@ npm run preview   # preview the production build locally
 
 ---
 
-## 4. Where to change WebsiteWallha information
+## 4. Where to change FirstDash information
 
 **`src/config/siteConfig.js`** — this is the only file you need for contact details.
 Everything on the site (buttons, footer, floating WhatsApp button, form) reads from it.
 
 ```js
 const siteConfig = {
-  brandName: 'WebsiteWallha',
+  brandName: 'FirstDash',
   tagline: 'Websites for local businesses.',
-  email: 'hello@websitewallha.com',
+  email: 'hello@firstdash.com',
   whatsappNumber: '919999999999',
-  instagram: 'https://instagram.com/websitewallha',
-  youtube: 'https://youtube.com/@websitewallha',
+  instagram: 'https://instagram.com/firstdash',
+  youtube: 'https://youtube.com/@firstdash',
   copyrightYear: 2026,
   ...
 };
@@ -418,7 +418,7 @@ Upload everything inside `dist/` to your `public_html` folder.
 
 ### After deploying
 
-In `index.html`, replace `https://websitewallha.com/` with your real domain in the
+In `index.html`, replace `https://firstdash.com/` with your real domain in the
 `canonical`, `og:url` and `robots.txt` sitemap lines.
 
 ---

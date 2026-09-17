@@ -16,7 +16,7 @@ export default function About() {
         {/* Left: copy */}
         <div>
           <Reveal as="p" className="eyebrow text-brand-300">
-            About WebsiteWallha
+            About FirstDash
           </Reveal>
 
           <Reveal delay={0.06}>
@@ -29,7 +29,7 @@ export default function About() {
 
           <Reveal delay={0.1}>
             <p className="mt-5 max-w-xl leading-relaxed text-slate-300/90">
-              WebsiteWallha works closely with local businesses to create websites that are
+              FirstDash works closely with local businesses to create websites that are
               simple to use, visually strong and built around real business needs.
             </p>
           </Reveal>

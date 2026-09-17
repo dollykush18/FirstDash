@@ -42,7 +42,7 @@ export default function Work() {
         <p className="mt-10 flex items-start gap-2.5 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3 text-[0.82rem] leading-relaxed text-slate-400 sm:items-center">
           <Info className="mt-0.5 h-4 w-4 shrink-0 text-brand-300 sm:mt-0" aria-hidden="true" />
           The demos are fully built sample websites, not screenshots &mdash; open one and scroll
-          it like a real site. They are concept designs made by WebsiteWallha; client projects
+          it like a real site. They are concept designs made by FirstDash; client projects
           will be added here as they go live.
         </p>
       </Reveal>

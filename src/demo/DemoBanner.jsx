@@ -6,7 +6,7 @@ import { demoUrl } from '../data/demos';
  * Persistent bar shown on every demo template.
  *
  * It does three jobs:
- *  1. Makes clear this is a WebsiteWallha sample, not a real business.
+ *  1. Makes clear this is a FirstDash sample, not a real business.
  *  2. Lets the visitor flip straight to the other template in the same
  *     category, so they can compare the two designs and pick one.
  *  3. Sends them back to the enquiry form while the design is fresh.
@@ -87,8 +87,8 @@ export default function DemoBanner({ demo }) {
 
           <a
             href={homeUrl}
-            title="Back to WebsiteWallha"
-            aria-label="Back to WebsiteWallha"
+            title="Back to FirstDash"
+            aria-label="Back to FirstDash"
             className="hidden h-9 w-9 shrink-0 items-center justify-center rounded-full border border-white/12 text-slate-300 transition-colors hover:bg-white/10 hover:text-white lg:inline-flex"
           >
             <ExternalLink className="h-4 w-4" aria-hidden="true" />

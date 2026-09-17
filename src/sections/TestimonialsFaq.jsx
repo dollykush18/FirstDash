@@ -32,7 +32,7 @@ export default function TestimonialsFaq() {
             <p className="mt-4 max-w-md text-[0.95rem] leading-relaxed text-slate-600">
               {showReal
                 ? 'Feedback from businesses we have worked with.'
-                : 'WebsiteWallha is a new studio, so there are no client reviews to show yet. Real testimonials will appear here as projects go live.'}
+                : 'FirstDash is a new studio, so there are no client reviews to show yet. Real testimonials will appear here as projects go live.'}
             </p>
           </Reveal>
 

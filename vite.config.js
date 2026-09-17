@@ -11,7 +11,7 @@ export default defineConfig({
   build: {
     rollupOptions: {
       /* Two pages are built:
-         index.html -> the WebsiteWallha studio site
+         index.html -> the FirstDash studio site
          demo.html  -> the demo template viewer (/demo.html?t=<slug>)
 
          Plain .html files mean the demos work on any static host with no

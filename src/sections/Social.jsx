@@ -25,7 +25,7 @@ export default function Social() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-4 max-w-md leading-relaxed text-slate-300/90">
-                Follow WebsiteWallha for website concepts, redesigns, business website ideas
+                Follow FirstDash for website concepts, redesigns, business website ideas
                 and behind-the-scenes work.
               </p>
             </Reveal>

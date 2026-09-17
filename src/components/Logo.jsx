@@ -1,5 +1,6 @@
 /**
- * WebsiteWallha logo mark: a browser window whose content area draws a "W".
+ * FirstDash logo mark: a browser window with an abstract zigzag mark inside,
+ * standing in for a website/growth graph.
  * `variant` controls the wordmark colour on dark vs light backgrounds.
  */
 export default function Logo({ variant = 'light', showWordmark = true, className = '' }) {
@@ -40,7 +41,7 @@ export default function Logo({ variant = 'light', showWordmark = true, className
         <span
           className={`font-display text-[1.05rem] font-extrabold tracking-[-0.02em] sm:text-lg ${wordmarkColor}`}
         >
-          Website<span className="text-brand-400">Wallha</span>
+          First<span className="text-brand-400">Dash</span>
         </span>
       )}
     </span>

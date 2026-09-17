@@ -27,7 +27,7 @@ export const placeholderTestimonials = [
     business: 'Business Name',
   },
   {
-    quote: 'Real client testimonials will be added as WebsiteWallha grows.',
+    quote: 'Real client testimonials will be added as FirstDash grows.',
     name: 'Client Name',
     business: 'Business Name',
   },

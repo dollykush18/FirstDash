@@ -17,7 +17,7 @@ export default function Footer() {
         <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between">
           {/* Brand */}
           <div className="max-w-xs">
-            <a href="#home" aria-label="WebsiteWallha home">
+            <a href="#home" aria-label="FirstDash home">
               <Logo />
             </a>
             <p className="mt-4 text-sm leading-relaxed text-slate-400">

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://websitewallha.com/sitemap.xml
+Sitemap: https://firstdash.com/sitemap.xml

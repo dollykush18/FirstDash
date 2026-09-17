@@ -35,7 +35,7 @@ function DemoIndex() {
     <main className="min-h-screen bg-[#0a0718] px-5 py-16 text-white sm:px-8">
       <div className="mx-auto max-w-[900px]">
         <p className="text-xs font-bold uppercase tracking-[0.18em] text-brand-300">
-          WebsiteWallha
+          FirstDash
         </p>
         <h1 className="mt-3 font-display text-3xl font-extrabold tracking-[-0.02em] sm:text-4xl">
           Demo Website Templates
@@ -78,7 +78,7 @@ function DemoIndex() {
           href={import.meta.env.BASE_URL}
           className="mt-14 inline-flex rounded-full border border-white/15 px-5 py-2.5 text-sm font-semibold text-slate-200 transition-colors hover:bg-white/10"
         >
-          ← Back to WebsiteWallha
+          ← Back to FirstDash
         </a>
       </div>
     </main>
@@ -96,8 +96,8 @@ export default function DemoApp() {
 
   useEffect(() => {
     document.title = demo
-      ? `${demo.businessName} — ${demo.style} template | WebsiteWallha demo`
-      : 'Demo Website Templates | WebsiteWallha';
+      ? `${demo.businessName} — ${demo.style} template | FirstDash demo`
+      : 'Demo Website Templates | FirstDash';
   }, [demo]);
 
   if (!demo || !Template) return <DemoIndex />;

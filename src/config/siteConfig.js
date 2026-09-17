@@ -1,5 +1,5 @@
 /* ==========================================================================
-   WEBSITEWALLHA - MASTER CONFIGURATION
+   FIRSTDASH - MASTER CONFIGURATION
    --------------------------------------------------------------------------
    This is the ONLY file you need to edit to change your contact details.
    Every button, link and form on the website reads from here.
@@ -7,29 +7,29 @@
 
 const siteConfig = {
   /* ---- Brand ---- */
-  brandName: 'WebsiteWallha',
+  brandName: 'FirstDash',
   tagline: 'Websites for local businesses.',
   positioning: 'Websites That Help Local Businesses Grow',
 
   /* ---- Contact  (CHANGE THESE) ---- */
-  email: 'hello@websitewallha.com',
+  email: 'hello@firstdash.com',
 
   // Digits only, with country code, no "+" and no spaces. India = 91.
   whatsappNumber: '919999999999',
 
   // Pre-filled message that opens inside WhatsApp when someone taps the button.
   whatsappMessage:
-    "Hi WebsiteWallha! I'd like a website for my business. Can we discuss?",
+    "Hi FirstDash! I'd like a website for my business. Can we discuss?",
 
   // Optional: shown in the footer. Leave as an empty string to hide it.
   phoneDisplay: '',
 
   /* ---- Social links  (CHANGE THESE) ---- */
-  instagram: 'https://instagram.com/websitewallha',
-  youtube: 'https://youtube.com/@websitewallha',
+  instagram: 'https://instagram.com/firstdash',
+  youtube: 'https://youtube.com/@firstdash',
 
   /* ---- Site meta ---- */
-  siteUrl: 'https://websitewallha.com',
+  siteUrl: 'https://firstdash.com',
   copyrightYear: 2026,
 
   /* ---- Contact form ----

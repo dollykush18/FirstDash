@@ -95,7 +95,7 @@ export default function Navbar() {
           className="container-page flex h-16 items-center justify-between sm:h-[4.5rem]"
           aria-label="Main navigation"
         >
-          <a href="#home" className="shrink-0" aria-label="WebsiteWallha home">
+          <a href="#home" className="shrink-0" aria-label="FirstDash home">
             <Logo />
           </a>
 

@@ -8,7 +8,7 @@ export default function WhyUs() {
   return (
     <Section id="why-us" tone="dark" className="pt-0 sm:pt-0 lg:pt-4">
       <SectionHeading
-        eyebrow="Why Choose WebsiteWallha"
+        eyebrow="Why Choose FirstDash"
         title="Reliable. Flexible."
         highlight="Business Focused."
         description="Everything is built to make your business easier to find, easier to trust and easier to contact."

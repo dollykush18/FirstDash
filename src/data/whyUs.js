@@ -1,4 +1,4 @@
-/* Section 9 - Why Choose WebsiteWallha */
+/* Section 9 - Why Choose FirstDash */
 export const whyUs = [
   {
     icon: 'Smartphone',

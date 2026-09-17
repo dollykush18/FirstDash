@@ -28,7 +28,7 @@ export default function WhatsAppFab() {
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Chat with WebsiteWallha on WhatsApp"
+          aria-label="Chat with FirstDash on WhatsApp"
           className="fixed bottom-5 right-5 z-40 inline-flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-[0_16px_40px_-12px_rgba(37,211,102,0.9)] transition-transform duration-300 hover:scale-105 sm:bottom-7 sm:right-7"
         >
           <MessageCircle className="h-6 w-6" aria-hidden="true" />

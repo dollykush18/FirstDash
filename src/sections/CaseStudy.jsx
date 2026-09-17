@@ -20,7 +20,7 @@ export default function CaseStudy() {
             <DeviceMockup />
           </div>
           <p className="mt-14 text-xs text-slate-400 sm:mt-16">
-            Concept design created by WebsiteWallha. Not an existing client project.
+            Concept design created by FirstDash. Not an existing client project.
           </p>
         </Reveal>
 
