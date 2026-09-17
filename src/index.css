@@ -1,0 +1,98 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --brand: 124 77 255;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    /* offset so sticky navbar never covers a section heading */
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    @apply bg-white font-sans text-ink-900 antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Visible, on-brand focus ring for keyboard users everywhere */
+  :focus-visible {
+    @apply outline-none ring-2 ring-brand-400 ring-offset-2 ring-offset-white;
+    border-radius: 0.5rem;
+  }
+
+  .dark-section :focus-visible {
+    @apply ring-offset-ink-950;
+  }
+
+  ::selection {
+    @apply bg-brand-500/30 text-ink-950;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-[1200px] px-5 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply text-xs font-bold uppercase tracking-[0.18em] text-brand-500;
+  }
+
+  /* Sized so "Local Businesses Grow" stays on one line inside the hero
+     column at every breakpoint instead of orphaning a word. */
+  .heading-xl {
+    @apply font-display text-[2.1rem] font-extrabold leading-[1.08] tracking-[-0.02em] sm:text-[2.75rem] md:text-[3.1rem] lg:text-[2.9rem] xl:text-[3.4rem];
+  }
+
+  .heading-lg {
+    @apply font-display text-[1.75rem] font-extrabold leading-[1.15] tracking-[-0.02em] sm:text-4xl lg:text-[2.75rem];
+  }
+
+  .heading-md {
+    @apply font-display text-xl font-bold leading-snug tracking-[-0.01em] sm:text-2xl;
+  }
+
+  .text-gradient {
+    @apply bg-brand-text bg-clip-text text-transparent;
+  }
+
+  /* Thin scrollbar for the horizontal mobile carousels */
+  .no-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .grid-lines {
+    background-image: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.045) 1px,
+        transparent 1px
+      ),
+      linear-gradient(to bottom, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+}

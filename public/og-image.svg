@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#05030f"/>
+      <stop offset="55%" stop-color="#160f33"/>
+      <stop offset="100%" stop-color="#2a1668"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#b9a9ff"/>
+      <stop offset="100%" stop-color="#7c4dff"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="1010" cy="140" r="220" fill="#7c4dff" opacity="0.28"/>
+  <circle cx="180" cy="560" r="180" fill="#6d33f5" opacity="0.22"/>
+  <g transform="translate(80,86)">
+    <rect width="60" height="60" rx="16" fill="url(#acc)"/>
+    <path d="M14 26l8 20 8-16 8 16 8-20" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="80" y="42" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="700" fill="#ffffff">WebsiteWallha</text>
+  </g>
+  <text x="80" y="300" font-family="Segoe UI, Arial, sans-serif" font-size="74" font-weight="800" fill="#ffffff">Websites That Help</text>
+  <text x="80" y="386" font-family="Segoe UI, Arial, sans-serif" font-size="74" font-weight="800" fill="url(#acc)">Local Businesses Grow</text>
+  <text x="80" y="456" font-family="Segoe UI, Arial, sans-serif" font-size="30" fill="#c9c2e8">Modern, responsive websites for restaurants, cafes, shops and growing businesses.</text>
+  <rect x="80" y="500" width="250" height="62" rx="31" fill="url(#acc)"/>
+  <text x="122" y="540" font-family="Segoe UI, Arial, sans-serif" font-size="25" font-weight="700" fill="#ffffff">Start a Project</text>
+</svg>
