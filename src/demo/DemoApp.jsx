@@ -2,8 +2,8 @@ import { Suspense, lazy, useEffect, useMemo } from 'react';
 import { demos, getDemo, demoUrl } from '../data/demos';
 import DemoBanner from './DemoBanner';
 
-/* Each template is code-split, so opening one demo never downloads the other
-   five. Keys must match the `slug` values in src/data/demos.js. */
+/* Each template is code-split, so opening one demo never downloads the rest.
+   Keys must match the `slug` values in src/data/demos.js. */
 const templates = {
   'restaurant-elegant': lazy(() => import('./templates/RestaurantElegant')),
   'restaurant-modern': lazy(() => import('./templates/RestaurantModern')),
@@ -11,6 +11,8 @@ const templates = {
   'cafe-minimal': lazy(() => import('./templates/CafeMinimal')),
   'salon-luxe': lazy(() => import('./templates/SalonLuxe')),
   'salon-fresh': lazy(() => import('./templates/SalonFresh')),
+  'clinic-trusted': lazy(() => import('./templates/ClinicTrusted')),
+  'clinic-modern': lazy(() => import('./templates/ClinicModern')),
 };
 
 function Loading() {
@@ -24,7 +26,7 @@ function Loading() {
   );
 }
 
-/** Shown when ?t= is missing or unknown: a simple picker of all six demos. */
+/** Shown when ?t= is missing or unknown: a simple picker of every demo. */
 function DemoIndex() {
   const byCategory = demos.reduce((acc, d) => {
     (acc[d.category] = acc[d.category] || []).push(d);

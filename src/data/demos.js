@@ -1,8 +1,8 @@
 /* ==========================================================================
    DEMO WEBSITE TEMPLATES
    --------------------------------------------------------------------------
-   Two ready-to-view template designs each for Restaurant, Café and Salon, so
-   a client can open both and tell you which direction they prefer.
+   Two ready-to-view template designs each for Restaurant, Café, Salon and
+   Clinic, so a client can open both and tell you which direction they prefer.
 
    Each demo opens in a new tab as a real, shareable page:
        /demo.html?t=<slug>
@@ -89,6 +89,28 @@ export const demos = [
     description:
       'A light, approachable layout in soft pastels — clear service packages, before-and-after gallery and a simple booking flow.',
     accent: '#db2777',
+  },
+
+  /* --------------------------------- Clinic -------------------------------- */
+  {
+    slug: 'clinic-trusted',
+    category: 'Healthcare',
+    businessName: 'CarePoint Clinic',
+    style: 'Trusted',
+    tagline: 'Clear, reassuring and practical',
+    description:
+      'A calm, information-first layout for family and multi-speciality clinics — departments, doctor profiles, OPD timings and an appointment form patients can actually use.',
+    accent: '#0284c7',
+  },
+  {
+    slug: 'clinic-modern',
+    category: 'Healthcare',
+    businessName: 'Aria Dental & Skin',
+    style: 'Modern',
+    tagline: 'Soft, premium and specialist',
+    description:
+      'A warm, spa-like layout for dental, skin and aesthetic clinics — published treatment pricing, specialist profiles and a consultation booking flow that feels unhurried.',
+    accent: '#2f6b5e',
   },
 ];
 

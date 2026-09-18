@@ -12,17 +12,18 @@ const siteConfig = {
   positioning: 'Websites That Help Local Businesses Grow',
 
   /* ---- Contact  (CHANGE THESE) ---- */
-  email: 'hello@firstdash.com',
+  email: 'firstdash3118@gmail.com',
 
   // Digits only, with country code, no "+" and no spaces. India = 91.
-  whatsappNumber: '919999999999',
+  // This is the number the WhatsApp button/FAB link to.
+  whatsappNumber: '918127667631',
 
   // Pre-filled message that opens inside WhatsApp when someone taps the button.
   whatsappMessage:
     "Hi FirstDash! I'd like a website for my business. Can we discuss?",
 
   // Optional: shown in the footer. Leave as an empty string to hide it.
-  phoneDisplay: '',
+  phoneDisplay: '+91 81276 67631 / +91 83188 78783',
 
   /* ---- Social links  (CHANGE THESE) ---- */
   instagram: 'https://instagram.com/firstdash',

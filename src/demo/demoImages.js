@@ -1,7 +1,7 @@
 /* ==========================================================================
    DEMO TEMPLATE IMAGERY
    --------------------------------------------------------------------------
-   Photos used inside the six demo websites, grouped by template.
+   Photos used inside the demo websites, grouped by template.
 
    TO REPLACE: drop a file into /public/images/ and change the value here,
    e.g.  hero: '/images/my-restaurant.jpg'
@@ -102,6 +102,32 @@ export const demoImages = {
       u('1571875257727-256c39da42af', 700),
       u('1519415510236-718bdfcd89c8', 700),
       u('1516975080664-ed2fc6a32937', 700),
+    ],
+  },
+
+  /* ---------- Clinic 01 · CarePoint Clinic (trusted, family practice) ---- */
+  clinicTrusted: {
+    hero: u('1631217868264-e5b90bb7e133', 1600),
+    reception: u('1519494026892-80bbd2d6fd0d', 1200),
+    checkup: u('1631815589968-fdb09a223b1e', 1000),
+    pharmacy: u('1580281658626-ee379f3cce93', 900),
+    doctors: [
+      u('1612349317150-e413f6a5b16d', 700),
+      u('1594824476967-48c8b964273f', 700),
+      u('1622253692010-333f2da6031d', 700),
+    ],
+  },
+
+  /* ---------- Clinic 02 · Aria Dental & Skin (calm, modern specialist) --- */
+  clinicModern: {
+    hero: u('1629909613654-28e377c37b09', 1600),
+    consult: u('1606811841689-23dfddce3e95', 1200),
+    aligner: u('1609840114035-3c981b782dfe', 900),
+    facial: u('1616394584738-fc6e612e71b9', 900),
+    scan: u('1588776814546-1ffcf47267a5', 900),
+    team: [
+      u('1594824476967-48c8b964273f', 700),
+      u('1622253692010-333f2da6031d', 700),
     ],
   },
 };

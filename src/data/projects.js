@@ -82,6 +82,7 @@ export const projects = [
   },
   {
     id: 'clinic',
+    demoCategory: 'Healthcare',
     title: 'Clinic Website',
     category: 'Healthcare',
     type: 'Concept Project',

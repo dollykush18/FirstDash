@@ -7,8 +7,8 @@ studio for restaurants, cafés, shops, salons, clinics and other local businesse
 
 Built with **React + Vite + JavaScript + Tailwind CSS + Framer Motion + Lucide React**.
 
-It ships with **six live demo website templates** (two each for restaurants, cafés and
-salons) that clients can open, compare and pick from — see section 11.
+It ships with **eight live demo website templates** (two each for restaurants, cafés,
+salons and clinics) that clients can open, compare and pick from — see section 11.
 
 ---
 
@@ -23,10 +23,12 @@ firstdash/
 ├── vite.config.js
 ├── postcss.config.js
 ├── public/
-│   ├── favicon.svg             Browser tab icon
+│   ├── favicon.png             Browser tab icon (the FD mark)
 │   ├── og-image.svg            Social share preview image
 │   ├── robots.txt
-│   └── images/                 ← put your own photos here
+│   └── images/
+│       ├── logo.png            The FD logo used in the nav, footer and demo bar
+│       └── ...                 ← put your own photos here
 └── src/
     ├── main.jsx                React entry point
     ├── App.jsx                 Section order only — no markup
@@ -35,7 +37,7 @@ firstdash/
     ├── config/
     │   └── siteConfig.js       ★ YOUR CONTACT DETAILS — edit this first
     │
-    ├── demo/                   The six live demo website templates
+    ├── demo/                   The eight live demo website templates
     │   ├── main.jsx             Demo page entry point
     │   ├── DemoApp.jsx          Picks a template from ?t=, plus the demo picker
     │   ├── DemoBanner.jsx       Sticky bar: style switcher + "I want this design"
@@ -220,9 +222,9 @@ client's site is live. No fake clients, logos, results or testimonials are used 
 
 ## 11. The demo website templates
 
-Six fully built sample websites ship with the project — **two design directions each
-for Restaurant, Café and Salon** — so a client can open both, compare them, and tell
-you which one they want.
+Eight fully built sample websites ship with the project — **two design directions each
+for Restaurant, Café, Salon and Clinic** — so a client can open both, compare them, and
+tell you which one they want.
 
 | Business | Style | Demo | Opens at |
 | --- | --- | --- | --- |
@@ -232,13 +234,15 @@ you which one they want.
 | Café | Minimal | Daylight Coffee | `/demo.html?t=cafe-minimal` |
 | Salon | Luxe | Maison Lux | `/demo.html?t=salon-luxe` |
 | Salon | Fresh | Bloom Beauty Bar | `/demo.html?t=salon-fresh` |
+| Clinic | Trusted | CarePoint Clinic | `/demo.html?t=clinic-trusted` |
+| Clinic | Modern | Aria Dental & Skin | `/demo.html?t=clinic-modern` |
 
-`/demo.html` with no `?t=` shows a picker listing all six.
+`/demo.html` with no `?t=` shows a picker listing all eight.
 
 ### How a client uses them
 
-1. On the **Our Work** section, cards for Restaurant, Café and Salon show two buttons
-   instead of one, labelled by style (e.g. *Elegant* / *Modern*).
+1. On the **Our Work** section, cards for Restaurant, Café, Salon and Clinic show two
+   buttons instead of one, labelled by style (e.g. *Elegant* / *Modern*).
 2. Clicking one opens that full demo site in a new tab, so your own site stays open.
 3. A bar pinned to the bottom of every demo lets them **flip straight to the other style**
    for the same business type, then hit **"I want this design"** — which drops them on

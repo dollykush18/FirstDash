@@ -20,19 +20,13 @@ export default function DemoBanner({ demo }) {
       <div className="mx-auto flex max-w-[1200px] flex-col gap-3 px-4 py-3 sm:px-6 md:flex-row md:items-center md:justify-between md:gap-6">
         {/* Left: what this is */}
         <div className="flex min-w-0 items-center gap-3">
-          <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-brand-gradient">
-            <svg viewBox="0 0 40 40" className="h-5 w-5" fill="none" aria-hidden="true">
-              <rect x="4.5" y="6.5" width="31" height="27" rx="5" stroke="white" strokeWidth="2.6" />
-              <path d="M4.5 14h31" stroke="white" strokeWidth="2.6" strokeLinecap="round" />
-              <path
-                d="M11 19.5l3.4 8.4 3.6-6.6 3.6 6.6 3.4-8.4"
-                stroke="white"
-                strokeWidth="2.8"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-          </span>
+          <img
+            src="/images/logo.png"
+            alt=""
+            width="82"
+            height="63"
+            className="h-7 w-auto shrink-0"
+          />
 
           <div className="min-w-0">
             <p className="text-[0.62rem] font-bold uppercase tracking-[0.14em] text-brand-300">
