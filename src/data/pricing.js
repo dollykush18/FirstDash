@@ -4,9 +4,10 @@
    Change prices, package names and features here only.
    The Pricing section renders entirely from this file.
 
-   price      -> the big number shown on the card (any string, e.g. '₹8,999')
-   priceNote  -> small grey line under the price
-   popular    -> true puts the "POPULAR" badge on the card and highlights it
+   price       -> the big figure on the card; a single price or a range
+   priceNote   -> small grey line under the price
+   maintenance -> recurring upkeep cost, shown as a chip under the price
+   popular     -> true puts the "POPULAR" badge on the card and highlights it
    buttonVariant -> card button styling: primary | dark | outline
    ========================================================================== */
 
@@ -18,8 +19,9 @@ export const pricingPlans = [
     id: 'starter',
     name: 'Starter',
     description: 'For simple business websites',
-    price: '₹8,999',
+    price: '₹4,999',
     priceNote: 'One-time · starting from',
+    maintenance: '₹499 / month',
     icon: 'Sparkle',
     features: [
       '1 Page Website',
@@ -35,8 +37,9 @@ export const pricingPlans = [
     id: 'business',
     name: 'Business',
     description: 'For complete online presence',
-    price: '₹14,999',
-    priceNote: 'One-time · starting from',
+    price: '₹7,999 – ₹11,999',
+    priceNote: 'One-time · depending on scope',
+    maintenance: '₹1,499 – ₹1,999 / month',
     icon: 'Rocket',
     features: [
       'Up to 5 Pages',
@@ -52,8 +55,9 @@ export const pricingPlans = [
     id: 'custom',
     name: 'Custom',
     description: 'For specific requirements',
-    price: "Let's Discuss",
+    price: '₹14,999 onwards',
     priceNote: 'Quoted after a short chat',
+    maintenance: '₹1,999 – ₹2,499 / month',
     icon: 'Gem',
     features: ['Custom Features', 'Optional Integrations', 'Ongoing Support'],
     buttonText: 'Get a Custom Quote',

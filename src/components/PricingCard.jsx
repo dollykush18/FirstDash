@@ -32,10 +32,22 @@ export default function PricingCard({ plan }) {
       </h3>
       <p className="mt-1.5 text-sm text-slate-600">{plan.description}</p>
 
-      <p className="mt-6 font-display text-[2.1rem] font-extrabold leading-none tracking-[-0.02em] text-ink-950 sm:text-[2.4rem]">
+      {/* Prices can be a single figure or a range, so the size flexes with the
+          card width rather than overflowing on narrow three-column layouts. */}
+      <p className="mt-6 font-display text-[clamp(1.35rem,2.1vw,1.95rem)] font-extrabold leading-tight tracking-[-0.02em] text-ink-950">
         {plan.price}
       </p>
       {plan.priceNote && <p className="mt-2 text-xs text-slate-500">{plan.priceNote}</p>}
+
+      {plan.maintenance && (
+        <p
+          className={`mt-4 w-fit rounded-lg px-2.5 py-1.5 text-[0.78rem] leading-snug ${
+            popular ? 'bg-brand-50 text-slate-600' : 'bg-slate-50 text-slate-600'
+          }`}
+        >
+          <span className="font-semibold text-ink-900">+ {plan.maintenance}</span> maintenance
+        </p>
+      )}
 
       <ul className="mt-7 flex-1 space-y-3">
         {plan.features.map((feature) => (
