@@ -26,7 +26,7 @@ const siteConfig = {
   phoneDisplay: '+91 81276 67631 / +91 83188 78783',
 
   /* ---- Social links  (CHANGE THESE) ---- */
-  instagram: 'https://instagram.com/firstdash',
+  instagram: 'https://www.instagram.com/firstdash31',
   youtube: 'https://www.youtube.com/@FirstDash31',
 
   /* ---- Site meta ---- */
