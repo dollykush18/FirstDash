@@ -27,17 +27,29 @@ const siteConfig = {
 
   /* ---- Social links  (CHANGE THESE) ---- */
   instagram: 'https://instagram.com/firstdash',
-  youtube: 'https://youtube.com/@firstdash',
+  youtube: 'https://www.youtube.com/@FirstDash31',
 
   /* ---- Site meta ---- */
   siteUrl: 'https://firstdash.com',
   copyrightYear: 2026,
 
   /* ---- Contact form ----
-     'demo'      -> logs the enquiry to the console and shows a success message
+     Where enquiries from the contact form are delivered.
+
+     'web3forms' -> emails every enquiry to the address that owns the access
+                    key below. Get a free key at https://web3forms.com: enter
+                    firstdash3118@gmail.com, confirm the verification email,
+                    then paste the key it gives you into web3formsKey.
      'formspree' -> set formspreeEndpoint below
-     'custom'    -> wire up your own API inside src/utils/submitEnquiry.js      */
-  formProvider: 'demo',
+     'custom'    -> wire up your own API inside src/utils/submitEnquiry.js
+     'demo'      -> NOTHING IS SENT. Logs to the browser console only.
+                    Use this for local testing, never on the live site.       */
+  formProvider: 'web3forms',
+
+  // Access key from web3forms.com, tied to firstdash3118@gmail.com.
+  // Public by design: it only allows sending to that verified address.
+  web3formsKey: '71dc285c-158a-4fb3-80cd-e92b76a50055',
+
   formspreeEndpoint: 'https://formspree.io/f/YOUR_FORM_ID',
 };
 
