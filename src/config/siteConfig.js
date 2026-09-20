@@ -9,7 +9,7 @@ const siteConfig = {
   /* ---- Brand ---- */
   brandName: 'FirstDash',
   tagline: 'Websites for local businesses.',
-  positioning: 'Websites That Help Local Businesses Grow',
+  positioning: 'Turning Business Into Digital Brands',
 
   /* ---- Contact  (CHANGE THESE) ---- */
   email: 'firstdash3118@gmail.com',

@@ -42,16 +42,16 @@ export default function Hero() {
               className="inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-500/10 px-3.5 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-brand-200 sm:text-[0.7rem]"
             >
               <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
-              Web Design for Local Businesses
+              Web Design for Businesses
             </motion.span>
 
             <motion.h1
               variants={item}
               className="heading-xl mt-6 text-white"
             >
-              Websites That Help
+              Turning Business Into
               <br />
-              <span className="text-gradient">Local Businesses</span> Grow
+              <span className="text-gradient">Digital Brands</span>
             </motion.h1>
 
             <motion.p
