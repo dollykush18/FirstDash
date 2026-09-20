@@ -1,4 +1,4 @@
-import { Quote } from 'lucide-react';
+import { ArrowUpRight, Quote } from 'lucide-react';
 
 /**
  * `placeholder` renders the honest "no clients yet" styling: dashed border,
@@ -37,7 +37,7 @@ export default function TestimonialCard({ testimonial, placeholder = false }) {
         >
           {placeholder ? '?' : testimonial.name.charAt(0)}
         </span>
-        <span>
+        <span className="min-w-0">
           <span
             className={`block text-[0.82rem] font-semibold ${
               placeholder ? 'text-slate-400' : 'text-ink-950'
@@ -48,6 +48,21 @@ export default function TestimonialCard({ testimonial, placeholder = false }) {
           <span className="block text-[0.74rem] text-slate-400">{testimonial.business}</span>
         </span>
       </figcaption>
+
+      {testimonial.link && (
+        <a
+          href={testimonial.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="group mt-4 inline-flex items-center gap-1.5 text-[0.78rem] font-semibold text-brand-600 transition-colors hover:text-brand-700"
+        >
+          {testimonial.project || 'View the live site'}
+          <ArrowUpRight
+            className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+            aria-hidden="true"
+          />
+        </a>
+      )}
     </figure>
   );
 }
