@@ -13,6 +13,10 @@ const templates = {
   'salon-fresh': lazy(() => import('./templates/SalonFresh')),
   'clinic-trusted': lazy(() => import('./templates/ClinicTrusted')),
   'clinic-modern': lazy(() => import('./templates/ClinicModern')),
+  'coaching-results': lazy(() => import('./templates/CoachingResults')),
+  'coaching-friendly': lazy(() => import('./templates/CoachingFriendly')),
+  'boutique-traditional': lazy(() => import('./templates/BoutiqueTraditional')),
+  'boutique-modern': lazy(() => import('./templates/BoutiqueModern')),
 };
 
 function Loading() {

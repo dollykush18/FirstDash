@@ -130,6 +130,46 @@ export const demoImages = {
       u('1622253692010-333f2da6031d', 700),
     ],
   },
+
+  /* ---------- Coaching 01 · Pathshala Classes (results-led, JEE/NEET) ---- */
+  coachingResults: {
+    hero: u('1571260899304-425eee4c7efc', 1600),
+    classroom: u('1509062522246-3755977927d7', 1200),
+    lecture: u('1524178232363-1fb2b075b655', 1000),
+    maths: u('1509228468518-180dd4864904', 900),
+    toppers: u('1627556704302-624286467c65', 900),
+    doubts: u('1522202176988-66273c2fd55f', 900),
+  },
+
+  /* ---------- Coaching 02 · NextStep Academy (friendly, school tuition) -- */
+  coachingFriendly: {
+    hero: u('1509062522246-3755977927d7', 1600),
+    juniors: u('1588072432836-e10032774350', 1200),
+    online: u('1610484826967-09c5720778c7', 900),
+    books: u('1503676260728-1c00da094a0b', 900),
+    room: u('1580582932707-520aed937b7b', 1000),
+    group: u('1522202176988-66273c2fd55f', 900),
+  },
+
+  /* ---------- Boutique 01 · Zari Boutique (bridal & festive, rich) ------- */
+  boutiqueTraditional: {
+    hero: u('1610030469983-98e550d6193c', 1400),
+    sharara: u('1583391733956-3750e0ff4e8b', 1200),
+    jewellery: u('1606760227091-3dd870d97f1d', 900),
+    gown: u('1595777457583-95e059d581b8', 900),
+    store: u('1441984904996-e0b6ba687e04', 1200),
+    rack: u('1567401893414-76b7b1e5a7a5', 900),
+  },
+
+  /* ---------- Boutique 02 · Kora Studio (everyday ethnic, minimal) ------- */
+  boutiqueModern: {
+    hero: u('1583391733956-3750e0ff4e8b', 1400),
+    saree: u('1610030469983-98e550d6193c', 1000),
+    rack: u('1490481651871-ab68de25d43d', 1200),
+    neutrals: u('1558769132-cb1aea458c5e', 900),
+    hoops: u('1617038220319-276d3cfab638', 900),
+    store: u('1567401893414-76b7b1e5a7a5', 1200),
+  },
 };
 
 export default demoImages;

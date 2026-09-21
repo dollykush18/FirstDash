@@ -7,8 +7,9 @@ studio for restaurants, cafés, shops, salons, clinics and other local businesse
 
 Built with **React + Vite + JavaScript + Tailwind CSS + Framer Motion + Lucide React**.
 
-It ships with **eight live demo website templates** (two each for restaurants, cafés,
-salons and clinics) that clients can open, compare and pick from — see section 11.
+It ships with **twelve live demo website templates** (two each for restaurants,
+cafés, salons, clinics, coaching institutes and boutiques) that clients can open,
+compare and pick from — see section 11.
 
 ---
 
@@ -37,7 +38,7 @@ firstdash/
     ├── config/
     │   └── siteConfig.js       ★ YOUR CONTACT DETAILS — edit this first
     │
-    ├── demo/                   The eight live demo website templates
+    ├── demo/                   The twelve live demo website templates
     │   ├── main.jsx             Demo page entry point
     │   ├── DemoApp.jsx          Picks a template from ?t=, plus the demo picker
     │   ├── DemoBanner.jsx       Sticky bar: style switcher + "I want this design"
@@ -49,7 +50,13 @@ firstdash/
     │       ├── CafeArtisan.jsx         Brew & Bloom
     │       ├── CafeMinimal.jsx         Daylight Coffee
     │       ├── SalonLuxe.jsx           Maison Lux
-    │       └── SalonFresh.jsx          Bloom Beauty Bar
+    │       ├── SalonFresh.jsx          Bloom Beauty Bar
+    │       ├── ClinicTrusted.jsx       CarePoint Clinic
+    │       ├── ClinicModern.jsx        Aria Dental & Skin
+    │       ├── CoachingResults.jsx     Pathshala Classes
+    │       ├── CoachingFriendly.jsx    NextStep Academy
+    │       ├── BoutiqueTraditional.jsx Zari Boutique
+    │       └── BoutiqueModern.jsx      Kora Studio
     │
     ├── data/                   All website text lives here
     │   ├── navigation.js       Navbar + footer links
@@ -134,10 +141,10 @@ Everything on the site (buttons, footer, floating WhatsApp button, form) reads f
 const siteConfig = {
   brandName: 'FirstDash',
   tagline: 'Websites for local businesses.',
-  email: 'hello@firstdash.com',
-  whatsappNumber: '919999999999',
-  instagram: 'https://instagram.com/firstdash',
-  youtube: 'https://youtube.com/@firstdash',
+  email: 'firstdash3118@gmail.com',
+  whatsappNumber: '918127667631',
+  instagram: 'https://www.instagram.com/firstdash31',
+  youtube: 'https://www.youtube.com/@FirstDash31',
   copyrightYear: 2026,
   ...
 };
@@ -180,8 +187,9 @@ footer WhatsApp icon.
   id: 'starter',
   name: 'Starter',
   description: 'For simple business websites',
-  price: '₹8,999',
+  price: '₹4,999',
   priceNote: 'One-time · starting from',
+  maintenance: '₹499 / month',   // optional recurring cost chip
   icon: 'Sparkle',
   features: ['1 Page Website', 'Mobile Responsive', ...],
   buttonText: 'Get Started',
@@ -222,9 +230,9 @@ client's site is live. No fake clients, logos, results or testimonials are used 
 
 ## 11. The demo website templates
 
-Eight fully built sample websites ship with the project — **two design directions each
-for Restaurant, Café, Salon and Clinic** — so a client can open both, compare them, and
-tell you which one they want.
+Twelve fully built sample websites ship with the project — **two design directions
+each for Restaurant, Café, Salon, Clinic, Coaching and Boutique** — so a client can
+open both, compare them, and tell you which one they want.
 
 | Business | Style | Demo | Opens at |
 | --- | --- | --- | --- |
@@ -236,13 +244,17 @@ tell you which one they want.
 | Salon | Fresh | Bloom Beauty Bar | `/demo.html?t=salon-fresh` |
 | Clinic | Trusted | CarePoint Clinic | `/demo.html?t=clinic-trusted` |
 | Clinic | Modern | Aria Dental & Skin | `/demo.html?t=clinic-modern` |
+| Coaching | Results | Pathshala Classes | `/demo.html?t=coaching-results` |
+| Coaching | Friendly | NextStep Academy | `/demo.html?t=coaching-friendly` |
+| Boutique | Traditional | Zari Boutique | `/demo.html?t=boutique-traditional` |
+| Boutique | Contemporary | Kora Studio | `/demo.html?t=boutique-modern` |
 
-`/demo.html` with no `?t=` shows a picker listing all eight.
+`/demo.html` with no `?t=` shows a picker listing all twelve.
 
 ### How a client uses them
 
-1. On the **Our Work** section, cards for Restaurant, Café, Salon and Clinic show two
-   buttons instead of one, labelled by style (e.g. *Elegant* / *Modern*).
+1. On the **Our Work** section, cards for Restaurant, Café, Salon, Clinic, Coaching and
+   Boutique show two buttons instead of one, labelled by style (e.g. *Elegant* / *Modern*).
 2. Clicking one opens that full demo site in a new tab, so your own site stays open.
 3. A bar pinned to the bottom of every demo lets them **flip straight to the other style**
    for the same business type, then hit **"I want this design"** — which drops them on

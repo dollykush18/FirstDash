@@ -1,8 +1,9 @@
 /* ==========================================================================
    DEMO WEBSITE TEMPLATES
    --------------------------------------------------------------------------
-   Two ready-to-view template designs each for Restaurant, Café, Salon and
-   Clinic, so a client can open both and tell you which direction they prefer.
+   Two ready-to-view template designs each for Restaurant, Café, Salon,
+   Clinic, Coaching and Boutique, so a client can open both and tell you
+   which direction they prefer.
 
    Each demo opens in a new tab as a real, shareable page:
        /demo.html?t=<slug>
@@ -111,6 +112,50 @@ export const demos = [
     description:
       'A warm, spa-like layout for dental, skin and aesthetic clinics — published treatment pricing, specialist profiles and a consultation booking flow that feels unhurried.',
     accent: '#2f6b5e',
+  },
+
+  /* -------------------------------- Coaching ------------------------------- */
+  {
+    slug: 'coaching-results',
+    category: 'Coaching & Education',
+    businessName: 'Pathshala Classes',
+    style: 'Results',
+    tagline: 'Serious, proof-led and exam focused',
+    description:
+      'A results-first layout for JEE, NEET and board coaching — batch details, faculty credentials, a transparent fee table and a free demo class booking.',
+    accent: '#1e40af',
+  },
+  {
+    slug: 'coaching-friendly',
+    category: 'Coaching & Education',
+    businessName: 'NextStep Academy',
+    style: 'Friendly',
+    tagline: 'Warm, parent-facing and approachable',
+    description:
+      'A welcoming layout for school tuition, spoken English and computer classes — small-batch promises, subject cards and an enquiry form parents will actually fill.',
+    accent: '#047857',
+  },
+
+  /* -------------------------------- Boutique ------------------------------- */
+  {
+    slug: 'boutique-traditional',
+    category: 'Clothing & Boutique',
+    businessName: 'Zari Boutique',
+    style: 'Traditional',
+    tagline: 'Rich, festive and bridal-ready',
+    description:
+      'A deep, jewel-toned layout for bridal and festive wear — lehenga and saree collections, custom stitching, measurement appointments and a boutique lookbook.',
+    accent: '#9d174d',
+  },
+  {
+    slug: 'boutique-modern',
+    category: 'Clothing & Boutique',
+    businessName: 'Kora Studio',
+    style: 'Contemporary',
+    tagline: 'Calm, minimal and everyday',
+    description:
+      'A quiet, editorial layout for everyday ethnic and fusion labels — a clean collection grid, honest fabric notes, made-to-measure service and studio visits.',
+    accent: '#b45309',
   },
 ];
 

@@ -45,6 +45,7 @@ export const projects = [
   },
   {
     id: 'boutique',
+    demoCategory: 'Clothing & Boutique',
     title: 'Boutique Website',
     category: 'Clothing & Boutique',
     type: 'Concept Project',
@@ -91,6 +92,19 @@ export const projects = [
     technologies: ['React', 'Tailwind', 'JS'],
     accent: '#0284c7',
     preview: { label: 'CarePoint', headline: 'Care You Can Trust', nav: ['Services', 'Doctors', 'Timings'] },
+    link: '#contact',
+  },
+  {
+    id: 'coaching',
+    demoCategory: 'Coaching & Education',
+    title: 'Coaching Institute Website',
+    category: 'Coaching & Education',
+    type: 'Concept Project',
+    description: 'Courses, faculty, results and demo class booking in one place.',
+    image: images.coaching,
+    technologies: ['React', 'Tailwind', 'JS'],
+    accent: '#1e40af',
+    preview: { label: 'Pathshala', headline: 'Small Batches, Real Results', nav: ['Courses', 'Results', 'Fees'] },
     link: '#contact',
   },
 ];

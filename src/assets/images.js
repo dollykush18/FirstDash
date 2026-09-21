@@ -35,6 +35,8 @@ export const images = {
   shopAlt: u('1534452203293-494d7ddbf7e0', 800),
   clinic: u('1576091160550-2173dba999ef', 1000),
   clinicAlt: u('1519494026892-80bbd2d6fd0d', 800),
+  coaching: u('1571260899304-425eee4c7efc', 1000),
+  coachingAlt: u('1509062522246-3755977927d7', 800),
 
   /* About section workspace */
   workspace: u('1497366754035-f200968a6e72', 1200),
